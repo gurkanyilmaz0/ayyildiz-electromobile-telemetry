@@ -18,7 +18,7 @@
 
 #define CAN_CS_PIN      53
 #define CAN_INT_PIN     21
-#define SD_CS           49
+#define SD_CS           10
 
 #define SICAKLIK_DS1    A0
 #define SICAKLIK_DS2    A1
