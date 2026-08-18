@@ -35,3 +35,16 @@ Bu depo, TÜBİTAK Uluslararası Elektrikli Araç Yarışları (Elektromobil) ş
 | **Sıcaklık Sensörleri (NTC)** | A0 (DS1), A1 (DS2), A2 (DS3) | Analog Girişler (10k Referans) |
 | **Kontaktör / Röle Kontrol** | Pin 7 | Aktif LOW Güç Kesme |
 | **Sesli / Işıklı Alarm** | Pin 6 | 55°C Üstü İkaz Çıkışı |
+
+## 📡 Yer İstasyonu Alıcı Bağlantısı (Arduino Mega 2560)
+
+Yer istasyonunda paket kaybını ve gecikmeyi önlemek amacıyla donanımsal UART (`Serial1`) üzerinden **Arduino Mega 2560** kullanılmaktadır:
+
+| LoRa Modülü (E22) Pini | Arduino Mega Pini | Açıklama |
+| :--- | :--- | :--- |
+| **VCC** | 5V | Güç Beslemesi |
+| **GND** | GND | Ortak Toprak |
+| **TXD** | Pin 19 (RX1) | LoRa'dan Mega'ya Veri Girişi |
+| **RXD** | Pin 18 (TX1) | Mega'dan LoRa'ya ACK Çıkışı |
+| **M0 / M1** | Pin 4 / Pin 5 (veya GND) | Normal Çalışma Modu (LOW) |
+| **USB Portu** | Serial (Pin 0/1 USB) | Bilgisayara ve Python GUI'ye Şeffaf Köprü |
